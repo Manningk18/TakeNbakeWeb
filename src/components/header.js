@@ -1,22 +1,18 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import styled from 'styled-components'
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <Container>
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        maxWidth: 1240,
+        padding: `1rem 1rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <Title style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -26,9 +22,10 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
+      </Title>
     </div>
-  </header>
+  </Container>
+    
 )
 
 Header.propTypes = {
@@ -40,3 +37,15 @@ Header.defaultProps = {
 }
 
 export default Header
+
+const Container = styled.div`
+background-image: linear-gradient( 
+  180deg
+   ,#0570d6 55%,#0b63b7);
+`;
+
+const Title = styled.div`
+  font-size: 32px;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+`;

@@ -26,17 +26,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div>
         <main>{children}</main>
         <footer
           style={{
-            marginTop: `2rem`,
+            padding: `1rem`,
+            backgroundImage: "linear-gradient( 180deg,#0570d6 55%,#0b63b7)",
+            color: "#fff"
           }}
         >
           © {new Date().getFullYear()}, Built with
